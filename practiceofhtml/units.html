@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            font-size: 35px;
+        }
+        .box{
+            background-color: blueviolet;
+            margin:10px;
+        }
+        .px{
+            width:200px;
+        }
+        .vw{
+            width:30vw;
+        }
+        .em{
+            width:10em;
+        }
+        .rem{
+            width:10rem;
+        }
+        .ems li{
+            font-size:1.5em;
+        }
+        .rems li{
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box px"> I am  200 px wide Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel, culpa, molestias voluptatem voluptatibus nam quod accusantium, cupiditate ratione provident sequi! Explicabo mollitia omnis dignissimos labore adipisci quod ea soluta?</div>
+        <div class="box vw">I am 10 vw wide</div>
+        <div class="parent">
+            <div class="box em">I am 10em wide</div>
+        </div>
+        <div class="box rem">I am 10rem wide</div>
+    </div>
+    <!-- differnece b/w rem and em -->
+    <ul class="rems">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <ul>
+                <li>Three a</li>
+                <li>Three b
+                    <ul>
+                        <li>Three b at</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="ems">
+        <!-- 1.5 * 16 =24px -->
+        <li>One</li>
+        <li>Two</li>
+        <li>Three
+            <!-- 1.5*16=24px * 1.5=36px -->
+            <ul>
+                <li>Three a</li>
+                <li>Three b
+                    <!-- 1.5*16=24px * 1.5=36px* 1.5=54px -->
+                    <ul>
+                        <li>Three b at</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+</html>
