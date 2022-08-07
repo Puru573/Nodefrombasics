@@ -70,6 +70,9 @@ video{
     left:3rem;
     z-index:2;
 }
+.timer{
+    display:none;
+}
 .filter{
     height:4rem;
     background-image:url("https://picsum.photos/seed/picsum/200/300");
@@ -81,15 +84,15 @@ video{
 }
 
 .orange{
-    background-color: coral;
+    background-color: #ffa50052;
 }
 
 .brown{
-    background-color: darkseagreen;
+    background-color: #a52a2a59;
 }
 
 .pink{
-    background-color: deeppink;
+    background-color: #ffc0cb57;
 }
 
 .transparent{
@@ -104,6 +107,33 @@ video{
     position: absolute;
     top:0;
     left:0;
+}
+.scale-capture{
+    animation-name:scale-capture;
+    animation-iteration-count: 1;
+    animation-duration:0.5s;
+}
+
+.scale-record{
+    animation-name:scale-record;
+    animation-iteration-count: infinite;
+    animation-duration:1s;
+}
+@keyframes scale-capture{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+@keyframes scale-record{
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1.1);
+    }
 }
 
 .material-icons{
