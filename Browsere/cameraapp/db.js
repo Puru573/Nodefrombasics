@@ -1,6 +1,6 @@
 //connect to database
 let db;
-let openRequest=indexDB.open('nyDatabase');
+let openRequest=indexedDB.open('nyDatabase');
 openRequest.addEventListener('success',()=>{
     console.log('db connected');
     db=openRequest.result;

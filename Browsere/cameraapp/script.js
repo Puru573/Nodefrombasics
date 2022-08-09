@@ -1,3 +1,4 @@
+let uid=new ShortUniqueId();
 let video=document.querySelector("video");
 let captureBtnCont=document.querySelector(".capture-btn-cont");
 let captureBtn=document.querySelector(".capture-btn");
@@ -36,10 +37,23 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
         let videoURL=URL.createObjectURL(blob);
         console.log(videoURL);
         //store in database
-        let a=document.createElement('a');
-        a.href=videoURL;
-        a.download="myvideo.mp4";
-        a.click();
+        // let a=document.createElement('a');
+        // a.href=videoURL;
+        // a.download="myvideo.mp4";
+        // a.click();
+        if(db){
+            let videoID=uid();
+            let dbTransaction=db.transaction("video","readwrite");
+            let videoStore=dbTransaction.objectStore("video");
+            let videoEntry={
+                id:videoID,
+                url:videoURL
+            }
+            let addrequest=videoStore.add(videoEntry);
+            addrequest.onsuccess=()=>{
+                console.log("video added to db successfully");
+            }
+        }
     })
 });
 
@@ -60,6 +74,20 @@ captureBtnCont.addEventListener("click",()=>{
     // let img= document.createElement("img");
     // img.src=imageURL;
     // document.body.append(img);
+
+    if(db) {
+        let imageID=uid();
+        let dbTransaction=db.transaction("image","readwrite");
+        let imageStore=dbTransaction.objectStore("image");
+        let imageEntry={
+            id:imageID,
+            url:imageURL
+        };
+        let addRequest=imageStore.add(imageEntry);
+        addRequest.onsuccess=() => {
+         console.log("image added to db successfully");   
+        }
+    }
     setTimeout(()=>{
         captureBtn.classList.remove("scale-capture");
 

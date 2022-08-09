@@ -5,12 +5,29 @@ body{
     margin:0;
     padding:0;
 }
-.heading{
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style:italic;
+    font-size:4rem;
+}
+
+.gallery-cont{
     text-align: center;
     font-size:65px;
-    margin-top: -4rem;
+    margin-top: 4rem;
     font-style:italic;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
 }
+
+   
+    
 
 html{
     background-color: lightsteelblue;
@@ -28,6 +45,32 @@ html{
     bottom:1rem;
     right:6rem;
     display:flex;
+}
+.media-cont{
+    height:15rem;
+    width:15rem;
+    border: 10px solid white;
+    margin:2rem;
+    
+    
+   
+}
+
+.action-btn{
+    height:2rem;
+    font-size: 22px;
+    margin-bottom: 1rem;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.download{
+    background-color: black;
+}
+.delete{
+    background-color: red;
 }
 .back-cont:hover{
     cursor:pointer;
