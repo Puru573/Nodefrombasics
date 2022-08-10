@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style:italic;
+    font-size:4rem;
+}
+
+.gallery-cont{
+    text-align: center;
+    font-size:65px;
+    margin-top: 4rem;
+    font-style:italic;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+   
+    
+
+html{
+    background-color: lightsteelblue;
+}
+
+.back-cont{
+    border-radius: 70%;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color:white;
+    position:absolute;
+    height:5rem;
+    width:5rem;
+    bottom:1rem;
+    right:6rem;
+    display:flex;
+}
+.media-cont{
+    height:15rem;
+    width:15rem;
+    border: 10px solid white;
+    margin:2rem;
+    object-fit:fill;
+   
+}
+
+.action-btn{
+
+    font-size: 22px;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:-1rem;
+ 
+}
+.action-bt{
+    font-size: 22px;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.action-btn:hover{
+    cursor:pointer;
+}
+.action-bt:hover{
+    cursor:pointer;
+}
+.download{
+    background-color: black;
+
+}
+.delete{
+    background-color: red;
+}
+.back-cont:hover{
+    cursor:pointer;
+}
+
+.media{
+    height:calc(100% -2rem -2rem);
+}
+
+.media>*{
+    width:100%;
+    height:100%;
+    object-fit: fill;
+}
