@@ -170,3 +170,6 @@ var ans=narr.myMap(function(num){
     return num*3;
 })
 console.log(ans);  
+
+Array.prototype.Mysize=9;
+console.log(narr.Mysize);
